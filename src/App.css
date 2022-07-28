@@ -36,19 +36,64 @@ ul.login-register li
 {
   margin-right: 10px;
 }
+li
+{
+  cursor: pointer;
+}
 ul.features-menu
 {
   visibility: hidden;
   position: absolute;
-  left: 100px;
+  left: 120px;
   display: block;
   padding: 15px 30px;
-  background-color: blueviolet;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 ul.features-menu>li
 {
-  margin-top: 8px;
-
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  font-size: 0.8rem;
+}
+ul.features-menu>li:first-child
+{
+  
+  margin-top: 0px;
+  
+}
+ul.features-menu>li>svg
+{
+  width: 25%;
+}
+ul.features-menu>li>a
+{
+  width: 70%;
+}
+ul.company-menu
+{
+  visibility: hidden;
+  position: absolute;
+  left: 280px;
+  display: block;
+  padding: 15px 30px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+ul.company-menu>li
+{
+  margin-top: 12px;
+  font-size: 0.8rem;
+}
+ul.company-menu>li:first-child
+{
+  
+  margin-top: 0px;
+  
 }
 a.register{
   border: 1px solid;
