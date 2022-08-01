@@ -49,8 +49,7 @@ const Navbar = () =>{
                     </svg>
                 </div>
                 <ul id='navbar-menu' className='navbar-menu'>
-                    <li>
-                        <a className='dropdown-menu' onClick={()=>
+                    <li onClick={()=>
                             {
                                 if(featuresdropdown == false)
                                 {
@@ -64,6 +63,7 @@ const Navbar = () =>{
                                 document.getElementById("company").style.visibility = "hidden";
                                 setCompanydropDown(false);
                             }}>
+                        <a className='dropdown-menu'>
                             <span>Features</span>
                             {featuresdropdown ? <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="#686868" strokeWidth="1.5" fill="none" d="m1 1 4 4 4-4"/></svg> :<svg width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="#686868" strokeWidth="1.5" fill="none" d="m1 5 4-4 4 4"/></svg>}
                         </a>
@@ -74,8 +74,7 @@ const Navbar = () =>{
                             <li><svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0Zm0 2.133a5.867 5.867 0 1 0 0 11.734A5.867 5.867 0 0 0 8 2.133ZM8 3.2a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6Zm-.533 2.667a.533.533 0 0 0-.534.533v2.133c0 .295.24.534.534.534h3.2a.533.533 0 0 0 0-1.067H8V6.4a.533.533 0 0 0-.533-.533Z" fill="#8E4CB6"/></svg><a>Planning</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a className='dropdown-menu' onClick={()=>
+                    <li onClick={()=>
                             {
                                 if(companydropdown == false)
                                 {
@@ -88,7 +87,8 @@ const Navbar = () =>{
                                 setCompanydropDown(!companydropdown);
                                 document.getElementById("features").style.visibility = "hidden";
                                 setFeaturesdropDown(false);
-                            }}><span>Company</span>{companydropdown ? <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="#686868" strokeWidth="1.5" fill="none" d="m1 1 4 4 4-4"/></svg> :<svg width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="#686868" strokeWidth="1.5" fill="none" d="m1 5 4-4 4 4"/></svg>}
+                            }}>
+                        <a className='dropdown-menu'><span>Company</span>{companydropdown ? <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="#686868" strokeWidth="1.5" fill="none" d="m1 1 4 4 4-4"/></svg> :<svg width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="#686868" strokeWidth="1.5" fill="none" d="m1 5 4-4 4 4"/></svg>}
                         </a>
                         <ul id='company' className='company-menu'>
                             <li><a>History</a></li>
@@ -102,7 +102,9 @@ const Navbar = () =>{
                 
             </div>
             <div className="navbaritem flex">
-            <div className='mobile-menu' id='openbtn'>
+            <div className='mobile-menu' id='openbtn' onClick={() =>{
+                document.getElementById("sidebar").style.display = "flex";
+            }}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="18"><g fill="#151515" fillRule="evenodd"><path d="M0 0h32v2H0zM0 8h32v2H0zM0 16h32v2H0z"/></g></svg>
             </div>
                 <ul id='login-register' className='login-register'>
