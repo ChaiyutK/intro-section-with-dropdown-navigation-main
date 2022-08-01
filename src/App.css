@@ -13,6 +13,9 @@ ul
   margin-top: 20px;
   list-style-type: none;
 }
+ul.navbar-menu{
+  visibility: visible;
+}
 ul.navbar-menu>li
 {
   margin-right: 40px;
@@ -21,10 +24,22 @@ ul.navbar-menu>li:first-child
 {
   margin-right: 50px;
 }
+.flex
+{
+  display: flex;
+  justify-content: center;
+}
+.logo
+{
+  display: flex;
+  width: 100%;
+  justify-content: center; 
+  align-items: center;
+  margin-left: 30px;
+}
 ul.login-register
 {
   padding: 0;
-  margin-top: 31;
   margin-bottom: 0;
   margin-right: 30px;
 }
@@ -102,9 +117,21 @@ a.register{
 }
 a.dropdown-menu{
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 a.dropdown-menu span{
   margin-right: 10px;
+}
+.mobile-menu
+{
+  display: flex;
+  height: 100%;
+  width: 100px;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
 }
 .attribution{
   text-align: center;
