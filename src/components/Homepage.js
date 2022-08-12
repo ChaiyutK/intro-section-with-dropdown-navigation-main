@@ -1,6 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Homepage = () => {
+
+  useEffect(() => {
+    const handleResize = () =>{
+      if(window.innerWidth < 1024)
+      {
+          document.getElementById("home-image").style.content = "url('./images/image-hero-mobile.png')";
+      }
+      else
+      {
+        document.getElementById("home-image").style.content = "url('./images/image-hero-desktop.png')";
+      }
+    }
+
+  window.addEventListener('resize', handleResize)
+
+  },[])
 
   return (
     <div className='homepage'>
@@ -40,7 +56,7 @@ const Homepage = () => {
             </div>
             </div>
             <div className="home-container-right">
-                <img src="./images/image-hero-desktop.png" className='homeimg' alt="music-image" />
+                <img id='home-image' src="./images/image-hero-desktop.png" className='homeimg' alt="music-image" />
             </div>
         </div>
     </div>

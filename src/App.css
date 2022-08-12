@@ -6,23 +6,24 @@ body{
 .homepage{
   height: 100vh;
   width: 100%;
-  background-color: red;
+  background-color: white;
 }
 .home-container{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
 }
 .home-container-left{
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 50%;
   height: 600px;
 }
 .home-header-group{
   width: 80%;
-  height: 300px;
+  height: 500px;
 }
 .home-header-group>h1{
   width: 80%;
@@ -30,9 +31,12 @@ body{
 }
 .home-header-group>p{
   width: 80%;
+  color: hsl(0, 0%, 41%);
+  line-height: 1.5;
   font-size: 1.2rem;
 }
 .home-header-group>button{
+  margin-top: 30px;
   padding: 15px 25px;
   border-radius: 10px;
   color: white;
@@ -40,9 +44,16 @@ body{
   font-weight: 500;
   background-color: hsl(0, 0%, 8%);
   border-color: hsl(0, 0%, 8%);
+  cursor: pointer;
+}
+.home-header-group>button:hover{
+  color: hsl(0, 0%, 8%);
+  background-color: white;
+  border-color: hsl(0, 0%, 8%);
 }
 .home-header-group>ul{
  width: 80%;
+ margin-top: 90px;
  justify-content: space-between;
  padding: 0;
 }
@@ -83,6 +94,10 @@ ul.navbar-menu>li
   align-items: center;
   margin-right: 40px;
 }
+ul.navbar-menu>li:hover
+{
+  color: black;
+}
 ul.navbar-menu>li:first-child
 {
   margin-right: 50px;
@@ -116,6 +131,10 @@ ul.login-register li
   align-items: center;
   margin-right: 10px;
 }
+ul.login-register li:hover
+{
+  color: black;
+}
 li
 {
   cursor: pointer;
@@ -134,11 +153,16 @@ ul.features-menu
 }
 ul.features-menu>li
 {
+  color: hsl(0, 0%, 41%);
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 12px;
   font-size: 0.8rem;
+}
+ul.features-menu>li:hover
+{
+  color: black;
 }
 ul.features-menu>li:first-child
 {
@@ -160,7 +184,7 @@ ul.company-menu
   visibility: hidden;
   position: absolute;
   top: 40px;
-  left: 295 px;
+  left: 295px;
   display: block;
   padding: 15px 30px;
   background-color: rgb(255, 255, 255);
@@ -169,8 +193,13 @@ ul.company-menu
 }
 ul.company-menu>li
 {
+  color: hsl(0, 0%, 41%);
   margin-top: 12px;
   font-size: 0.8rem;
+}
+ul.company-menu>li:hover
+{
+  color: black;
 }
 ul.company-menu>li:first-child
 {
@@ -206,6 +235,7 @@ a.dropdown-menu span{
   display: none;
   height: 100vh;
   position: fixed;
+  z-index: 1;
   width: 100%;
   font-size: 18px;
   color: hsl(0, 0%, 41%);
@@ -242,6 +272,10 @@ ul.sidebar-menu>li
   flex-wrap: wrap;
   margin-top: 20px;
 }
+ul.sidebar-menu>li:hover
+{
+  color: black;
+}
 ul.sidebar-menu>li>a>svg
 {
   margin-left: 10px;
@@ -254,7 +288,11 @@ ul.sidebar-features-menu{
   transition: all 0.2ms linear;
 }
 ul.sidebar-features-menu>li{
+  color: hsl(0, 0%, 41%);
   margin-top: 20px;
+}
+ul.sidebar-features-menu>li:hover{
+  color: black;
 }
 ul.sidebar-features-menu>li>svg{
   transform: scale(1.5);
@@ -268,7 +306,11 @@ ul.sidebar-company-menu{
   transition: all 0.2ms linear;
 }
 ul.sidebar-company-menu>li{
+  color: hsl(0, 0%, 41%);
   margin-top: 20px;
+}
+ul.sidebar-company-menu>li:hover{
+  color: black;
 }
 ul.sidebar-login-register
 {
@@ -281,6 +323,10 @@ ul.sidebar-login-register li
   justify-content: center;
   margin-top: 10px;
 }
+ul.sidebar-login-register li:hover
+{
+  color: black;
+}
 ul.sidebar-login-register li a
 {
   text-align: center;
@@ -288,4 +334,57 @@ ul.sidebar-login-register li a
 }
 .attribution{
   text-align: center;
+}
+@media only screen and (max-width: 1024px) {
+  .homepage{
+    height: auto;
+  }
+  .home-container{
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+  }
+  .home-container-left{
+    width: 100%;
+    height: auto;
+  }
+  .home-header-group{
+    width: 100%;
+    height: 500px;
+    text-align: center;
+  }
+  .home-header-group>h1{
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .home-header-group>p{
+    width: 80%;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .home-header-group>button{
+    margin-top: 20px;
+  }
+  .home-header-group>ul{
+   width: 100%;
+   margin-top: 30px;
+   justify-content: space-between;
+  }
+  .home-container-right{
+    width: 100%;
+    height: auto;
+  }
+  .homeimg{
+    width: 100%;
+  }
+  .home-sponser>li
+  {
+    width: 100px;
+  }
+  .home-sponser>li>svg
+  {
+    transform: scale(0.6);
+  }
 }
